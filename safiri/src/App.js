@@ -8,10 +8,13 @@ import TheNavbar from './components/navbar/TheNavbar';
 import Footer from './components/footer/Footer';
 
 const Home = lazy(() => import("./views/home/Home"));
-// const ForCompanyPage = lazy(() => import("./pages/ForCompanyPage"));
+const Register = lazy(() => import ('./auth/signup/SignUp'))
+const Account = lazy(() => import ('./views/account/Account'))
+
 
 
 const  App = () =>  {
+
 
   const theme = {
         colors : {
@@ -32,7 +35,9 @@ const  App = () =>  {
             <TheNavbar/>
               <Switch>
                 <Route exact path = "/" component = {Home} />
-                {/* <Route exact path = "/for-company" component = {ForCompanyPage} /> */}
+                <Route exact path = "/register" component = {Register} />
+                <Route exact path = "/account" component = {Account} />
+
                 </Switch>
             <Footer/>
             </Suspense>

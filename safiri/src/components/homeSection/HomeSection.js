@@ -26,8 +26,23 @@ function HomeSection() {
               },
               {
                      image: '',
-                     country: "Nigeria",
-                     price: "$1455.99"
+                     country: "South Africa",
+                     price: "$2150.99"
+              },
+              {
+                     image: '',
+                     country: "Rwanda",
+                     price: "$1600.99"
+              },
+              {
+                     image: '',
+                     country: "Maldivez",
+                     price: "$16005.99"
+              },
+              {
+                     image: '',
+                     country: "Ethiopia",
+                     price: "$1780.99"
               },
        ]
        

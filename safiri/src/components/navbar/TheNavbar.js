@@ -2,7 +2,6 @@ import React , {useState, useEffect} from 'react'
 import { Link , useHistory , useLocation } from 'react-router-dom';
 import { FiMenu, FiX} from 'react-icons/fi'
 import logo from "../../assets/logo.svg";
-import logowhite from "../../assets/logowhite.svg";
 import './theNavbar.css'
 
 const TheNavbar = () => {
@@ -74,7 +73,7 @@ const TheNavbar = () => {
                                                         </li>
 
                                                         <li className= {`nav-item   ${pathname === "/swit" && "text-primary"}`} >
-                                                               <Link className = "nav-link"  to = '/swit' 
+                                                               <Link className = "nav-link"  to = '/savings' 
                                                                onClick = {() => closeMobileView()}>
                                                                Savings
                                                                </Link>
@@ -82,22 +81,22 @@ const TheNavbar = () => {
 
 
                                                         <li className= {`nav-item  ${pathname === "/start-ups" && "text-primary"}`} 
-                                                        onClick = {() => history.push("/start-ups")}>
-                                                               <Link className = "nav-link"  to = '/start-ups' 
+                                                        onClick = {() => history.push("/account")}>
+                                                               <Link className = "nav-link"  to = '/account' 
                                                                onClick = {closeMobileView}>
                                                                Account
                                                                </Link>
                                                         </li>
 
                                                         {largeScreen && <li className= {`nav-item   ${pathname === "/blog" && "text-primary"}`}>
-                                                               <Link className = "nav-link"  to = '/blog' 
+                                                               <Link className = "nav-link"  to = '/dashboard' 
                                                                onClick = {closeMobileView}>
                                                                Dashboard
                                                                </Link>
                                                         </li>}
                                                         <li className= {`nav-item for-company  ${pathname=== "/for-company" && "text-primary"}`} 
-                                                               onClick = {() => history.push("/for-company")}>
-                                                               <Link className = "nav-link"  to = '/for-company' 
+                                                               onClick = {() => history.push("/register")}>
+                                                               <Link className = "nav-link"  to = '/register' 
                                                                onClick = {closeMobileView}>
                                                                Sign Up
                                                                </Link>

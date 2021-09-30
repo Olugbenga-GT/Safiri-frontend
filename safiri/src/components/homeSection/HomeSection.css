@@ -62,10 +62,11 @@ text-align: left;
        color: var(--light-grey-color);
 }
 .home-section__tour{
-       display: flex;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
 }
 .home-section__destination{
-       margin: 2rem 1rem;
+       margin: 2.7rem 1rem;
 }
 .home-section__destination--rate{
        display: flex;
