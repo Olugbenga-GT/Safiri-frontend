@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DashboardCard = ({amount, title, color}) => {
+const DashboardCard = ({amount, title, color, icon}) => {
 
     const cardStyle =  {
         backgroundColor: color.bgColor,
@@ -12,8 +12,9 @@ const DashboardCard = ({amount, title, color}) => {
 
     return (
         <div style={cardStyle}>
-            <h2>${amount}</h2>
-            <p style={{color: "black"}}>{title}</p>
+            { icon && <img src={icon} alt="icon"/>}
+            {amount &&  <h2>${amount}</h2>}
+            { title &&  <p style={{color: "black"}}>{title}</p>}
         </div>
     );
 };
