@@ -4,17 +4,23 @@ import './AccountForm.css'
 
 function AccountForm(props) {
 
-       const url = 'https://restcountries.eu/rest/v2/all'
-       const fetchCountries = async() => {
-              try {
-                     const response = await fetch(url)
-                     const countries = await response.json()
-                     console.log(countries)
-              }
-              catch(error){
-                            console.log(error)
-              }
-       }
+       // I intend to use this to populate the Destination input. instead of doing  something like this... :(Check the next link)
+       // https://www.technicalkeeda.com/html-tutorials/all-countries-drop-down-list-in-html
+
+       // const url = 'https://restcountries.eu/rest/v2/all'
+       // const fetchCountries = async() => {
+       //        try {
+       //               const response = await fetch(url)
+       //               const countries = await response.json()
+       //               console.log(countries)
+       //        }
+       //        catch(error){
+       //                      console.log(error)
+       //        }
+       // }
+
+       // So, tou get all the countries, then loop thru them amd put them in the options of select.
+
        return (
               <section className = "account-form">
                      <h1>Set up your account details</h1>
@@ -24,7 +30,15 @@ function AccountForm(props) {
                                    <div className="formwrap-left">
                                           <div className="form-group">
                                                  <label htmlFor="destination">Destination</label>
-                                                 <input type="text" />
+                                                 <select name="destination" id="destinantion">
+                                                        {/* Replace all these with fetchCountries API Call */}
+                                                        <option value="America" >America</option>
+                                                        <option value="Brazil" >Brazil</option>
+                                                        <option value="Nigeria">Nigeria</option>
+                                                        <option value="Azerbaijan">Azerbaijan</option>
+                                                        <option value="Tanzania">Tanzania</option>
+                                                 </select>
+                                          </div>
                                           </div>
                                           <div className="form-group">
                                                  <label htmlFor="budget">Budget</label>
@@ -68,7 +82,7 @@ function AccountForm(props) {
                                                  <input type="month"  />
                                           </div>
                                    </div>
-                            </div>
+                    
                             <Button backgroundColor = '#0692C4' text = 'DONE'  textColor="#fff"   borderColor = '#0692C4'  borderRadius = '4px'
                                           extraStyle ={{
                                                  height: '55px' , 
