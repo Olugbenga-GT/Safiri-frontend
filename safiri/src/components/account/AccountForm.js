@@ -1,54 +1,96 @@
-import React from 'react'
+import React , { useState} from 'react'
+
 import Button from '../../ui/button/Button'
 import './AccountForm.css'
 
 function AccountForm(props) {
 
-       // I intend to use this to populate the Destination input. instead of doing  something like this... :(Check the next link)
-       // https://www.technicalkeeda.com/html-tutorials/all-countries-drop-down-list-in-html
+       const [destination , setDestination] = useState('');
+       const [budget , setBudget] = useState('');
+       const [savePreference , setSavePreference] = useState('');
+       const [amount, setAmount] = useState('');
+       const [date , setDate] = useState('');
+       const [preferredTime , setPreferredTime] = useState('');
+       const [startTime , setStartTime] = useState('');
+       const [payment , setPayment] = useState('');
 
-       // const url = 'https://restcountries.eu/rest/v2/all'
-       // const fetchCountries = async() => {
-       //        try {
-       //               const response = await fetch(url)
-       //               const countries = await response.json()
-       //               console.log(countries)
-       //        }
-       //        catch(error){
-       //                      console.log(error)
-       //        }
-       // }
+       const destinationChangeHandler = (event) => {
+              setDestination(event.target.value)
+       }
+       const budgetChangeHandler = (event) => {
+              setBudget(event.target.value)
+       }
+       const savePreferenceChangeHandler = (event) => {
+              setSavePreference(event.target.value)
+       }
+       const amountChangeHandler = (event) => {
+              setAmount(event.target.value)
+       }
+       const dateChangeHandler = (event) => {
+              setDate(event.target.value)
+       }
+       const preferredTimeChangeHandler = (event) => {
+              setPreferredTime(event.target.value)
+       }
+       const startTimeChangeHandler = (event) => {
+              setStartTime(event.target.value)
+       }
 
-       // So, tou get all the countries, then loop thru them amd put them in the options of select.
+       const paymentChangeHandler = (event) => {
+              setPayment(event.target.value)
+       }
+
+       const submitFormHandler = (event) => {
+              event.preventDefault();
+
+              const accountData = {
+                     destination : destination ,
+                     budget : budget,
+                     savePreference : savePreference,
+                     amount : amount,
+                     date: date,
+                     preferredTime : preferredTime,
+                     startTime : startTime,
+                     payment : payment,
+              }
+
+              console.log(accountData);
+
+              setDestination('')
+              setBudget('')
+              setSavePreference ('')
+              setAmount('')
+              setDate('')
+              setPreferredTime('')
+              setStartTime('')
+              setPayment('')
+
+       }
 
        return (
               <section className = "account-form">
                      <h1>Set up your account details</h1>
-                     <form  className = "formwrap" >
+                     <form  className = "formwrap"  onSubmit = {submitFormHandler}>
                             <div className="formwrap-content">
                                    
                                    <div className="formwrap-left">
                                           <div className="form-group">
                                                  <label htmlFor="destination">Destination</label>
-                                                 <select name="destination" id="destinantion">
-                                                        {/* Replace all these with fetchCountries API Call */}
-                                                        <option value="America" >America</option>
-                                                        <option value="Brazil" >Brazil</option>
-                                                        <option value="Nigeria">Nigeria</option>
-                                                        <option value="Azerbaijan">Azerbaijan</option>
+                                                 <select name="destination" id="destination" onChange = {destinationChangeHandler} value = {destination}>
+                                                        <option value="Nigeria" placeholder>Nigeria</option>
+                                                        <option value="Ghana">Ghana</option>
                                                         <option value="Tanzania">Tanzania</option>
+                                                        <option value="Mexico">Mexico</option>
                                                  </select>
-                                          </div>
                                           </div>
                                           <div className="form-group">
                                                  <label htmlFor="budget">Budget</label>
-                                                 <input type="number"   min="100" step="50.00"  max="250,000" placeholder ="$100"/>
+                                                 <input type="number"   min="100" step="50.00"  max="250,000" placeholder ="$100"  onChange = {budgetChangeHandler} value = {budget}/>
                                           </div>
                                           <div className="form-group">
                                                  <label>How will you prefer to save? </label>
-                                                 <select name="save" id="save">
-                                                        <option value="Daily" placeholder = "Daily">Use Bank Card</option>
-                                                     
+                                                 <select name="savePreference" id="savePreference" onChange = {savePreferenceChangeHandler} value = {savePreference}>
+                                                        <option value="Daily" placeholder = "Daily">Daily</option>
                                                         <option value="Weekly" >Weekly</option>
                                                         <option value="Fortnightly" >Fortnightly</option>
                                                         <option value="Monthly">Monthly</option>
@@ -58,37 +100,38 @@ function AccountForm(props) {
                                           </div>
                                           <div className="form-group">
                                                  <label >Amount to save per time </label>
-                                                 <input type="number"   min="100" step="50.00"  max="250,000" />
+                                                 <input type="number"   min="100" step="50.00"  max="250,000" onChange = {amountChangeHandler}  value = {amount} />
                                           </div>
                                    </div>
                                    <div className="formwrap-right">
                                           <div className="form-group">
                                                  <label >Date</label>
-                                                 <input type="date"  min="2020-01-01"  />
+                                                 <input type="date"  min="2020-01-01"  onChange = {dateChangeHandler} value = {date} />
                                           </div>
                                           <div className="form-group">
-                                                 <label >Preferred time</label>
-                                                 <input type="time" placeholder ="08:00" />
+                                                 <label for = "preferredTime">Preferred time</label>
+                                                 <input type="time" placeholder ="08:00" onChange = {preferredTimeChangeHandler} value = {preferredTime} />
                                           </div>
                                           <div className="form-group">
                                                  <label  for ="payment"> Where should the funds come from ?</label>
-                                                 <select name="payment" id="payment">
+                                                 <select name="payment" id="payment" onChange = {paymentChangeHandler} value = {payment}>
                                                         <option value="Bank Card" placeholder = "Use Bank Card">Use Bank Card</option>
                                                         <option value="saab">Cash</option>
                                                  </select>
                                           </div>
                                           <div className="form-group">
-                                                 <label > When do you want to start ?</label>
-                                                 <input type="month"  />
+                                                 <label  for = "startTime"> When do you want to start ?</label>
+                                                 <input type="month"  onChange = {startTimeChangeHandler}  value = {startTime}/>
                                           </div>
                                    </div>
-                    
-                            <Button backgroundColor = '#0692C4' text = 'DONE'  textColor="#fff"   borderColor = '#0692C4'  borderRadius = '4px'
+                            </div>
+                            <Button backgroundColor = '#0692C4' text = 'DONE'  textColor="#fff"   borderColor = '#0692C4'  borderRadius = '4px' 
                                           extraStyle ={{
                                                  height: '55px' , 
                                                  width: '180px',
                                                  fontSize : '18px',
                                           }}
+
                             />
 
                      </form>
