@@ -41,7 +41,7 @@ const  App = () =>  {
                 <Route strict exact path = "/dashboard" component = {Dashboard} />
             <Dashboard/>
                 </Switch>
-            {/*<Footer/>*/}
+            <Footer/>
             </Suspense>
             </AppStyles>
     </ThemeProvider>
