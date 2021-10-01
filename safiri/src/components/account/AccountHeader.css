@@ -31,3 +31,18 @@
        line-height: 1.75;
        width: 50%;
 }
+
+@media screen and (max-width : 960px){
+
+       .account-header {
+              height: 70vh;
+              text-align: left;
+       }
+
+       .account-header__content{
+              padding: 0 4rem;
+       }
+       .account-header__content--text p{
+              width: 100%;
+       }
+}

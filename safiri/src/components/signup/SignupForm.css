@@ -29,3 +29,18 @@
        margin-bottom: 2.5rem;
 }
 .signup-form__formwrap--form-group input:last-child{ margin-bottom: 3.5rem;}
+
+@media screen and (max-width : 960px){
+       .signup-form {
+              background-color: var(--light-grey-color);
+              padding:  4rem ;
+       }
+
+       .signup-form__formwrap--form-group input{
+              width: 40rem;
+              height: 4rem;
+              padding: 1.5rem;
+              border-radius: .4rem;
+              margin-bottom: 2rem;
+       }
+}

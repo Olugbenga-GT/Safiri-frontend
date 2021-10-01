@@ -18,7 +18,6 @@
 float: right;
 }
 
-
 .formwrap-content{
        display: flex;
        justify-content: space-between;
@@ -46,4 +45,25 @@ float: right;
        padding: 1.5rem;
        border-radius: .4rem;
        margin-bottom: 2.5rem;
+}
+
+@media screen and (max-width : 960px){
+       .account-form {
+              background-color: var(--light-grey-color);
+              padding:  4rem ;
+       }
+       .formwrap-content{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+       }
+
+       .formwrap-content input,
+       .formwrap-content select{
+              width: 40rem;
+              height: 5rem;
+              padding: 1.5rem;
+              border-radius: .4rem;
+              margin-bottom: 2rem;
+       }
 }

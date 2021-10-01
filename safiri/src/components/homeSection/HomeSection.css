@@ -13,6 +13,7 @@
 }
 .home-section__embark--img{
 padding-right: 2rem;
+
 }
 .home-section__embark--text{
 padding: 5rem 0 5rem 2rem;
@@ -111,8 +112,38 @@ grid-template-columns: repeat(3, 1fr);
        cursor: pointer;
        transition: all .4s ease-in-out;
 }
-/* .home-section__destination--flight button :hover{
-       border-color: var(--primary-color);
-       background-color: var(--primary-color);
-       color: var(--light-grey-color);
-} */
+
+
+@media screen and (max-width: 960px){
+       .home-section{
+              padding:0;
+              overflow: hidden;
+       }
+       .home-section__embark {
+              display: flex;
+              flex-direction: column;
+       }
+
+       .home-section__embark--img{
+              padding:0;
+              width: inherit;
+        }
+        .home-section__embark--text{
+              padding: 5rem 2rem 5rem 2rem;
+              text-align: left;
+              }
+       .home-section__available--text{
+              display: flex;
+              justify-content: center;
+       }
+       .home-section__available--text a {display: none;}
+
+       .home-section__tour{
+              display: grid;
+              grid-template-columns: repeat(1, 1fr);
+       }
+       .home-section__destination{
+              margin: 2.7rem auto;
+       }
+       
+}
