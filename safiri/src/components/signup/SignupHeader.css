@@ -31,3 +31,18 @@
        line-height: 1.75;
        width: 50%;
 }
+
+@media screen and (max-width : 960px){
+
+       .signup-header {
+              height: 70vh;
+              text-align: left;
+       }
+
+       .signup-header__content{
+              padding: 0 4rem;
+       }
+       .signup-header__content--text p{
+              width: 100%;
+       }
+}
