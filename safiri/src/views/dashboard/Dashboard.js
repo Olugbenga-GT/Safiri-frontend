@@ -22,17 +22,17 @@ const Dashboard = () => {
             color: {bgColor: "#F7E4E4", col: "#C4060C"}
         },
 
-        {
-            icon: "/home/whalewalker/Whalewalker/Portfolio/Safiri-frontend/safiri/src/assets/redit-card.png",
-            title: "Make payment from your flutterwave card",
-            color: {bgColor: "#D8FAD2", col: "#1FC406"}
-        }
+        // {
+        //     icon: "/home/whalewalker/Whalewalker/Portfolio/Safiri-frontend/safiri/src/assets/redit-card.png",
+        //     title: "Make payment from your flutterwave card",
+        //     color: {bgColor: "#D8FAD2", col: "#1FC406"}
+        // }
 
     ]
     return (
-        <>
+        <div>
                <h2>Dashboard</h2>
-               <div className="card-data">
+               <div className={classes["card-data"]}>
                    {data.map((value, key) =>
                        <DashboardCard
                            key={key}
@@ -42,10 +42,10 @@ const Dashboard = () => {
                            color={value.color}
                        />
                    )}
+               </div>
                    <h3>Quick links</h3>
                     <DashboardChart/>
-               </div>
-        </>
+        </div>
     );
 };
 

@@ -33,7 +33,7 @@ const  App = () =>  {
           <GlobalStyle/>
             <AppStyles>
             <Suspense fallback =  { <h1>Page Loading, Please hold on ...</h1>}>
-            <TheNavbar/>
+            {/*<TheNavbar/>*/}
               <Switch>
                 <Route strict exact path = "/" component = {Home} />
                 <Route strict exact path = "/register" component = {Register} />
