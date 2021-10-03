@@ -6,6 +6,9 @@ import Button from '../../ui/button/Button'
 import  car from '../../assets/car.svg'
 import  pillartent from '../../assets/pillartent.svg'
 import bridge from '../../assets/bridge.svg'
+import southy from '../../assets/southy.svg'
+import morocco from '../../assets/morocco.svg'
+import mauritius from '../../assets/mauritius.svg'
 import food from '../../assets/food.svg'
 import flight from '../../assets/flight.svg'
 import hotel from '../../assets/hotel.svg'
@@ -15,33 +18,33 @@ function HomeSection() {
 
        const destinations =[
               {
-                     image: '',
+                     image: `${car}`,
                      country: "Kenya",
                      price: "$1455.99"
               },
               {
-                     image: '',
+                     image:  `${pillartent}`,
                      country: "Ghana",
                      price: "$1455.99"
               },
               {
-                     image: '',
-                     country: "South Africa",
+                     image: `${bridge}`,
+                     country: "Nigeria",
                      price: "$2150.99"
               },
               {
-                     image: '',
-                     country: "Rwanda",
+                     image: `${southy}`,
+                     country: "South Africa",
                      price: "$1600.99"
               },
               {
-                     image: '',
-                     country: "Maldivez",
+                     image: `${mauritius}`,
+                     country: "Mauritius",
                      price: "$16005.99"
               },
               {
-                     image: '',
-                     country: "Ethiopia",
+                     image: `${morocco}`,
+                     country: "Morrocc",
                      price: "$1780.99"
               },
        ]
@@ -54,8 +57,9 @@ function HomeSection() {
                                           <img src={photographer} alt="Photographer" />
                                    </div>
                                    <div className="home-section__embark--text">
-                                          <h2>Embark on budget friendly trips and carry out cost effective transaction</h2>
-                                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, id accusamus. Fugit unde reiciendis asperiores error commodi perspiciatis molestias repudiandae. Voluptatem accusantium ducimus et, temporibus unde natus ipsam nemo perferendis aut, tenetur, distinctio pariatur praesentium? Tenetur sequi veritatis cum quasi ad sapiente expedita. Fugiat corrupti ducimus, dolores ut dolor blanditiis!</p>
+                                          <h2>Digital bank for frequent travellers</h2>
+                                          <p>Safiri works as the digital bank for frequent travellers.  From the point ofo knowing the kind of funds to set aside, to making payments for flight, food, hotel bookings, airtime and data, Sfiri takes care of al your financial worries.  <br/>  You will be issued avirtual dollar MasterCard to cater for all your internatioal transactions, we will also offer you. the unique opportunity to get an emergency travel loan when you overspend during your trip.  <br/>
+                                          Beyond this, we nsure you remain financially intelligent by giving you real time analysis of your spendings so far. </p>
                                           <Button backgroundColor = '#0692C4' text = 'Get Started'  borderColor = '#0692C4'  borderRadius = '4px'
                                           extraStyle ={{
                                                  height: '55px' , 
@@ -74,7 +78,7 @@ function HomeSection() {
                                           {
                                                  destinations.map((destination) => 
                                                  <Card className = "home-section__destination">
-                                                        <img src= {destination.image + car} alt="img" />
+                                                        <img src= {destination.image} alt="img" />
                                                         <div className="home-section__destination--rate">
                                                                <p>{destination.country}</p>
                                                                <p>{destination.price}</p>

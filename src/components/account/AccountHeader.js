@@ -7,7 +7,7 @@ function AccountHeader() {
               <div className="account-header__content">
                      <div className="account-header__content--text">
                     <h1>Sign Up Seamlessly</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eveniet. Commodi minus aut, aperiam id nisi suscipit </p>
+                    <p>Travellers in the 17th Century travelled carrying their money in sacks, but you can travel carrying your own funds in your device. Set up your account. </p>
                      </div>
               </div>   
        </header>

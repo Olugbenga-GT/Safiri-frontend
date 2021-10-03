@@ -6,11 +6,12 @@ import GlobalStyle from './GlobalStyle';
 import AppStyles from './styles/AppStyles';
 import TheNavbar from './components/navbar/TheNavbar';
 import Footer from './components/footer/Footer';
-import Dashboard from "./views/dashboard/Dashboard";
 
 const Home = lazy(() => import("./views/home/Home"));
 const Register = lazy(() => import ('./auth/signup/SignUp'))
 const Account = lazy(() => import ('./views/account/Account'))
+const Saving = lazy(() => import ('./views/savings/Saving'))
+const Dashboard = lazy(() => import ('./views/dashboard/Dashboard'))
 
 
 
@@ -38,8 +39,8 @@ const  App = () =>  {
                 <Route strict exact path = "/" component = {Home} />
                 <Route strict exact path = "/register" component = {Register} />
                 <Route strict exact path = "/account" component = {Account} />
+                <Route strict exact path = "/savings" component = {Saving} />
                 <Route strict exact path = "/dashboard" component = {Dashboard} />
-            <Dashboard/>
                 </Switch>
             <Footer/>
             </Suspense>
