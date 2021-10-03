@@ -40,7 +40,6 @@ const TheNavbar = () => {
                                           <img  src = {logo} alt="Safiri  Logo"/>
                                    </Link> 
        
-
                                          {/* Only shows On MobileScreen */}
 
                                          {!largeScreen &&
@@ -52,21 +51,21 @@ const TheNavbar = () => {
                                           <div className= 'first-nav'>
                                                  <ul>
                                                         {!largeScreen &&
-                                                        <li className= {`nav-item  ${pathname === "/" && "text-primary"}`} >
+                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} >
                                                                <Link className = "nav-link"  to = '/' 
                                                                onClick = {() => closeMobileView()}>
                                                                Home
                                                                </Link>
                                                         </li>
                                                         }
-                                                        <li className= {`nav-item  ${pathname === "/about" && "text-primary"}`} >
+                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} >
                                                                <Link className = "nav-link"  to = '/about' 
                                                                onClick = {() => closeMobileView()}>
                                                                About Us
                                                                </Link>
                                                         </li>
 
-                                                        <li className= {`nav-item   ${pathname === "/savings" && "text-primary"}`} >
+                                                        <li className= {`nav-item   ${pathname === "/dashboard" && "text-primary"}`} >
                                                                <Link className = "nav-link"  to = '/savings' 
                                                                onClick = {() => closeMobileView()}>
                                                                Savings
@@ -74,7 +73,7 @@ const TheNavbar = () => {
                                                         </li>
 
 
-                                                        <li className= {`nav-item  ${pathname === "/account" && "text-primary"}`} 
+                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} 
                                                         onClick = {() => history.push("/account")}>
                                                                <Link className = "nav-link"  to = '/account' 
                                                                onClick = {closeMobileView}>
@@ -88,7 +87,7 @@ const TheNavbar = () => {
                                                                Dashboard
                                                                </Link>
                                                         </li>}
-                                                        <li className= {`nav-item  ${pathname=== "/register" && "text-primary"}`} 
+                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} 
                                                                onClick = {() => history.push("/register")}>
                                                                <Link className = "nav-link"  to = '/register' 
                                                                onClick = {closeMobileView}>

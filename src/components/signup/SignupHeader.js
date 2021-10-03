@@ -6,8 +6,8 @@ function SignupHeader() {
               <header className ="signup-header">
                      <div className="signup-header__content">
                             <div className="signup-header__content--text">
-                           <h1>Sign Up Seamlessly</h1>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eveniet. Commodi minus aut, aperiam id nisi suscipit </p>
+                           <h1>A journey of a thoussand mile begin with a step ...</h1>
+                           <p>Begin your journey bysigning up </p>
                             </div>
                      </div>   
               </header>
