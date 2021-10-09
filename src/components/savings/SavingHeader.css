@@ -36,14 +36,23 @@
 @media screen and (max-width : 960px){
 
        .saving-header {
-              height: 70vh;
+              height: 100vh;
               text-align: left;
        }
 
        .saving-header__content{
               padding: 0 4rem;
        }
+       .saving-header__content--text h1{
+              width: 100%;
+              margin-bottom: 6rem;
+       }
+       
        .saving-header__content--text p{
+              color: #FAFAFA;
+              font-size: 1.6rem;
+              letter-spacing: 0.02em;
+              line-height: 1.75;
               width: 100%;
        }
 }

@@ -16,7 +16,7 @@ const BarChart = () => {
 
     return (
             <div >
-                <div className="barchart" style ={{flexBasis:'2' , padding : '0 4rem 0 4rem'}}>
+                <div className="barchart" style ={{flexBasis:'2' , padding : '0 4rem 0 4rem' , marginBottom:'4rem'}}>
                         <p  style = {{fontSize:'18px' , fontColor: '#222428'}}>Amount spent so far: $180,000</p>
                         <Bar
                             data={data}

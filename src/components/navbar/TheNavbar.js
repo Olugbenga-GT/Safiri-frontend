@@ -51,21 +51,21 @@ const TheNavbar = () => {
                                           <div className= 'first-nav'>
                                                  <ul>
                                                         {!largeScreen &&
-                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} >
+                                                        <li className= {`nav-item  ${pathname === "/" && "text-primary"}`} >
                                                                <Link className = "nav-link"  to = '/' 
                                                                onClick = {() => closeMobileView()}>
                                                                Home
                                                                </Link>
                                                         </li>
                                                         }
-                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} >
-                                                               <Link className = "nav-link"  to = '/about' 
+                                                        <li className= {`nav-item  ${pathname === "/" && "text-primary"}`} >
+                                                               <Link className = "nav-link"  to = '/' 
                                                                onClick = {() => closeMobileView()}>
                                                                About Us
                                                                </Link>
                                                         </li>
 
-                                                        <li className= {`nav-item   ${pathname === "/dashboard" && "text-primary"}`} >
+                                                        <li className= {`nav-item   ${pathname === "/about" && "text-primary"}`} >
                                                                <Link className = "nav-link"  to = '/savings' 
                                                                onClick = {() => closeMobileView()}>
                                                                Savings
@@ -73,7 +73,7 @@ const TheNavbar = () => {
                                                         </li>
 
 
-                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} 
+                                                        <li className= {`nav-item  ${pathname === "/account" && "text-primary"}`} 
                                                         onClick = {() => history.push("/account")}>
                                                                <Link className = "nav-link"  to = '/account' 
                                                                onClick = {closeMobileView}>
@@ -81,13 +81,14 @@ const TheNavbar = () => {
                                                                </Link>
                                                         </li>
 
-                                                        {largeScreen && <li className= {`nav-item   ${pathname === "/dashboard" && "text-primary"}`}>
+                                                         <li className= {`nav-item   ${pathname === "/dashboard" && "text-primary"}`}>
                                                                <Link className = "nav-link"  to = '/dashboard' 
                                                                onClick = {closeMobileView}>
                                                                Dashboard
                                                                </Link>
-                                                        </li>}
-                                                        <li className= {`nav-item  ${pathname === "/dashboard" && "text-primary"}`} 
+                                                        </li>
+                                                  
+                                                        <li className= {`nav-item  ${pathname === "/register" && "text-primary"}`} 
                                                                onClick = {() => history.push("/register")}>
                                                                <Link className = "nav-link"  to = '/register' 
                                                                onClick = {closeMobileView}>
