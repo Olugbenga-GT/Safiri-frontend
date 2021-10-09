@@ -22,7 +22,7 @@ const PieChart = () => {
 
     return (
             <div >
-                <div className="piechart"  style ={{flexBasis:'1'}}>
+                <div className="piechart"  style ={{flexBasis:'1' ,  padding : '0 4rem 0 4rem' , marginBottom:'4rem'}}>
                         <p style = {{fontSize:'18px' , fontColor: '#222428'}}>Average Cost by country</p>
                         <Pie
                             data={data}
